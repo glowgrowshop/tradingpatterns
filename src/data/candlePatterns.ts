@@ -22,7 +22,7 @@ export const CANDLE_PATTERNS: CandlePatternDef[] = [
     name: 'Hammer',
     bias: 'bullish',
     context: 'downtrend',
-    candles: [{ open: 0.62, high: 0.66, low: 0, close: 0.68 }],
+    candles: [{ open: 0.62, high: 0.7, low: 0, close: 0.68 }],
     description: 'A small body near the top of the range with a long lower wick at least twice the body — appearing after a downtrend. Sellers pushed price sharply lower intrabar, but buyers stepped in and drove it back up.',
     keyTells: ['Long lower wick ≥ 2x the body', 'Little to no upper wick', 'Forms after a decline', 'Small real body near the high of the candle'],
     howToTrade: ['Wait for the next candle to close higher to confirm', 'Stop below the hammer’s low', 'More reliable at a known support level or Fibonacci zone'],

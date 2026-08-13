@@ -113,8 +113,9 @@ export const INDICATOR_SCENARIOS: IndicatorScenario[] = [
     indicator: 'macd',
     title: 'MACD Histogram Shrinks While Price Makes New Highs',
     points: [
-      { x: 0, y: 0.3 }, { x: 0.25, y: 0.55 }, { x: 0.45, y: 0.68 },
-      { x: 0.62, y: 0.8 }, { x: 0.8, y: 0.9 }, { x: 1, y: 0.95 },
+      { x: 0, y: 0.15 }, { x: 0.18, y: 0.55 }, { x: 0.28, y: 0.44 },
+      { x: 0.42, y: 0.68 }, { x: 0.52, y: 0.58 }, { x: 0.66, y: 0.78 },
+      { x: 0.76, y: 0.7 }, { x: 0.88, y: 0.86 }, { x: 1, y: 0.8 },
     ],
     setupNote: 'Price is grinding to new swing highs, but each successive MACD histogram peak is smaller than the last — a bearish momentum divergence.',
     question: 'What\'s the highest-probability read here?',

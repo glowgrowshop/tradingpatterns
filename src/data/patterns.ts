@@ -20,9 +20,9 @@ export const CHART_PATTERNS: PatternDef[] = [
     bias: 'bearish',
     kind: 'reversal',
     points: [
-      { x: 0, y: 0.28 }, { x: 0.15, y: 0.62 }, { x: 0.3, y: 0.42 },
-      { x: 0.45, y: 0.88 }, { x: 0.6, y: 0.42 }, { x: 0.75, y: 0.62 },
-      { x: 0.87, y: 0.4 }, { x: 1, y: 0.1 },
+      { x: 0, y: 0.25 }, { x: 0.15, y: 0.56 }, { x: 0.26, y: 0.37 },
+      { x: 0.4, y: 0.88 }, { x: 0.54, y: 0.36 }, { x: 0.68, y: 0.56 },
+      { x: 0.8, y: 0.37 }, { x: 1, y: 0.08 },
     ],
     description: 'Three peaks — a left shoulder, a higher head, and a right shoulder of similar height to the left shoulder — with a "neckline" connecting the two swing lows. It shows demand failing to push price to new highs a third time.',
     keyTells: [
@@ -44,9 +44,9 @@ export const CHART_PATTERNS: PatternDef[] = [
     bias: 'bullish',
     kind: 'reversal',
     points: [
-      { x: 0, y: 0.72 }, { x: 0.15, y: 0.38 }, { x: 0.3, y: 0.58 },
-      { x: 0.45, y: 0.12 }, { x: 0.6, y: 0.58 }, { x: 0.75, y: 0.38 },
-      { x: 0.87, y: 0.6 }, { x: 1, y: 0.9 },
+      { x: 0, y: 0.75 }, { x: 0.15, y: 0.44 }, { x: 0.26, y: 0.63 },
+      { x: 0.4, y: 0.12 }, { x: 0.54, y: 0.64 }, { x: 0.68, y: 0.44 },
+      { x: 0.8, y: 0.63 }, { x: 1, y: 0.92 },
     ],
     description: 'The mirror image of a head and shoulders top, found at the bottom of a downtrend. A deeper middle low (the head) sits between two shallower lows (the shoulders), signaling sellers are losing control.',
     keyTells: [
@@ -68,8 +68,8 @@ export const CHART_PATTERNS: PatternDef[] = [
     bias: 'bearish',
     kind: 'reversal',
     points: [
-      { x: 0, y: 0.2 }, { x: 0.25, y: 0.85 }, { x: 0.42, y: 0.48 },
-      { x: 0.58, y: 0.84 }, { x: 0.78, y: 0.42 }, { x: 1, y: 0.12 },
+      { x: 0, y: 0.2 }, { x: 0.26, y: 0.84 }, { x: 0.44, y: 0.5 },
+      { x: 0.62, y: 0.84 }, { x: 0.8, y: 0.46 }, { x: 1, y: 0.14 },
     ],
     description: 'Price rallies to a resistance level, pulls back, then rallies again but fails at roughly the same level — forming an "M" shape. It reflects a second failed attempt by buyers to break through.',
     keyTells: [
@@ -91,8 +91,8 @@ export const CHART_PATTERNS: PatternDef[] = [
     bias: 'bullish',
     kind: 'reversal',
     points: [
-      { x: 0, y: 0.8 }, { x: 0.25, y: 0.15 }, { x: 0.42, y: 0.52 },
-      { x: 0.58, y: 0.16 }, { x: 0.78, y: 0.58 }, { x: 1, y: 0.88 },
+      { x: 0, y: 0.8 }, { x: 0.26, y: 0.16 }, { x: 0.44, y: 0.5 },
+      { x: 0.62, y: 0.16 }, { x: 0.8, y: 0.54 }, { x: 1, y: 0.86 },
     ],
     description: 'The inverse of a double top — a "W" shape where price finds support twice at a similar level before breaking higher through the intervening peak.',
     keyTells: [
@@ -114,9 +114,9 @@ export const CHART_PATTERNS: PatternDef[] = [
     bias: 'bullish',
     kind: 'continuation',
     points: [
-      { x: 0, y: 0.3 }, { x: 0.15, y: 0.68 }, { x: 0.3, y: 0.42 },
-      { x: 0.45, y: 0.68 }, { x: 0.6, y: 0.5 }, { x: 0.75, y: 0.67 },
-      { x: 0.87, y: 0.58 }, { x: 1, y: 0.96 },
+      { x: 0, y: 0.22 }, { x: 0.12, y: 0.68 }, { x: 0.24, y: 0.3 },
+      { x: 0.38, y: 0.68 }, { x: 0.5, y: 0.42 }, { x: 0.64, y: 0.68 },
+      { x: 0.76, y: 0.54 }, { x: 0.86, y: 0.68 }, { x: 1, y: 0.97 },
     ],
     description: 'A flat horizontal resistance line caps price while the swing lows keep rising, squeezing price into a tightening range. Buyers are becoming more aggressive on each dip.',
     keyTells: [
@@ -137,9 +137,9 @@ export const CHART_PATTERNS: PatternDef[] = [
     bias: 'bearish',
     kind: 'continuation',
     points: [
-      { x: 0, y: 0.7 }, { x: 0.15, y: 0.32 }, { x: 0.3, y: 0.58 },
-      { x: 0.45, y: 0.32 }, { x: 0.6, y: 0.5 }, { x: 0.75, y: 0.33 },
-      { x: 0.87, y: 0.42 }, { x: 1, y: 0.04 },
+      { x: 0, y: 0.78 }, { x: 0.12, y: 0.32 }, { x: 0.24, y: 0.7 },
+      { x: 0.38, y: 0.32 }, { x: 0.5, y: 0.58 }, { x: 0.64, y: 0.32 },
+      { x: 0.76, y: 0.46 }, { x: 0.86, y: 0.32 }, { x: 1, y: 0.03 },
     ],
     description: 'The mirror image of an ascending triangle — a flat horizontal support line while swing highs keep falling, showing sellers stepping in more aggressively on each rally.',
     keyTells: [
@@ -160,9 +160,9 @@ export const CHART_PATTERNS: PatternDef[] = [
     bias: 'neutral',
     kind: 'continuation',
     points: [
-      { x: 0, y: 0.32 }, { x: 0.15, y: 0.78 }, { x: 0.3, y: 0.38 },
-      { x: 0.45, y: 0.68 }, { x: 0.6, y: 0.44 }, { x: 0.75, y: 0.6 },
-      { x: 0.87, y: 0.5 }, { x: 1, y: 0.88 },
+      { x: 0, y: 0.5 }, { x: 0.12, y: 0.86 }, { x: 0.24, y: 0.24 },
+      { x: 0.36, y: 0.72 }, { x: 0.48, y: 0.38 }, { x: 0.6, y: 0.6 },
+      { x: 0.72, y: 0.47 }, { x: 0.82, y: 0.52 }, { x: 1, y: 0.9 },
     ],
     description: 'Converging trendlines — lower highs meeting higher lows — squeeze volatility out of the market before an explosive move. Direction is not implied by the shape itself; it usually resolves in the direction of the prior trend.',
     keyTells: [
@@ -183,9 +183,8 @@ export const CHART_PATTERNS: PatternDef[] = [
     bias: 'bullish',
     kind: 'continuation',
     points: [
-      { x: 0, y: 0.15 }, { x: 0.28, y: 0.82 }, { x: 0.4, y: 0.72 },
-      { x: 0.5, y: 0.78 }, { x: 0.62, y: 0.68 }, { x: 0.74, y: 0.74 },
-      { x: 1, y: 1.0 },
+      { x: 0, y: 0.1 }, { x: 0.22, y: 0.88 }, { x: 0.28, y: 0.78 },
+      { x: 0.33, y: 0.83 }, { x: 0.38, y: 0.74 }, { x: 1, y: 1.0 },
     ],
     description: 'A sharp, near-vertical rally (the "flagpole") followed by a tight, slightly downward-drifting consolidation (the "flag") before the trend resumes. Represents a brief, healthy pause after an aggressive move.',
     keyTells: [
@@ -206,9 +205,8 @@ export const CHART_PATTERNS: PatternDef[] = [
     bias: 'bearish',
     kind: 'continuation',
     points: [
-      { x: 0, y: 0.85 }, { x: 0.28, y: 0.18 }, { x: 0.4, y: 0.28 },
-      { x: 0.5, y: 0.22 }, { x: 0.62, y: 0.32 }, { x: 0.74, y: 0.26 },
-      { x: 1, y: 0.0 },
+      { x: 0, y: 0.9 }, { x: 0.22, y: 0.12 }, { x: 0.28, y: 0.22 },
+      { x: 0.33, y: 0.17 }, { x: 0.38, y: 0.26 }, { x: 1, y: 0.0 },
     ],
     description: 'The bearish mirror of a bull flag — a sharp decline followed by a tight, slightly upward-drifting consolidation before the downtrend resumes.',
     keyTells: [
@@ -229,9 +227,9 @@ export const CHART_PATTERNS: PatternDef[] = [
     bias: 'bearish',
     kind: 'reversal',
     points: [
-      { x: 0, y: 0.18 }, { x: 0.2, y: 0.48 }, { x: 0.35, y: 0.38 },
-      { x: 0.5, y: 0.6 }, { x: 0.65, y: 0.53 }, { x: 0.8, y: 0.66 },
-      { x: 0.9, y: 0.6 }, { x: 1, y: 0.22 },
+      { x: 0, y: 0.15 }, { x: 0.15, y: 0.45 }, { x: 0.28, y: 0.3 },
+      { x: 0.42, y: 0.6 }, { x: 0.55, y: 0.48 }, { x: 0.68, y: 0.68 },
+      { x: 0.8, y: 0.6 }, { x: 0.88, y: 0.7 }, { x: 1, y: 0.25 },
     ],
     description: 'Both trendlines slope upward but converge, with the lower line rising faster than the upper — price keeps making higher highs and higher lows, but momentum and volume typically fade, warning of an exhausted rally.',
     keyTells: [
@@ -252,9 +250,9 @@ export const CHART_PATTERNS: PatternDef[] = [
     bias: 'bullish',
     kind: 'reversal',
     points: [
-      { x: 0, y: 0.82 }, { x: 0.2, y: 0.52 }, { x: 0.35, y: 0.62 },
-      { x: 0.5, y: 0.4 }, { x: 0.65, y: 0.47 }, { x: 0.8, y: 0.34 },
-      { x: 0.9, y: 0.4 }, { x: 1, y: 0.78 },
+      { x: 0, y: 0.85 }, { x: 0.15, y: 0.55 }, { x: 0.28, y: 0.7 },
+      { x: 0.42, y: 0.4 }, { x: 0.55, y: 0.52 }, { x: 0.68, y: 0.32 },
+      { x: 0.8, y: 0.4 }, { x: 0.88, y: 0.3 }, { x: 1, y: 0.75 },
     ],
     description: 'The bullish mirror of a rising wedge — both trendlines slope down and converge, with the upper line falling faster. It signals selling pressure is exhausting even as price ekes out lower lows.',
     keyTells: [
@@ -275,9 +273,11 @@ export const CHART_PATTERNS: PatternDef[] = [
     bias: 'bullish',
     kind: 'continuation',
     points: [
-      { x: 0, y: 0.72 }, { x: 0.16, y: 0.32 }, { x: 0.32, y: 0.12 },
-      { x: 0.5, y: 0.14 }, { x: 0.66, y: 0.36 }, { x: 0.78, y: 0.68 },
-      { x: 0.85, y: 0.58 }, { x: 0.94, y: 0.64 }, { x: 1, y: 0.95 },
+      { x: 0, y: 0.72 }, { x: 0.05, y: 0.5 }, { x: 0.1, y: 0.33 },
+      { x: 0.15, y: 0.21 }, { x: 0.2, y: 0.14 }, { x: 0.25, y: 0.12 },
+      { x: 0.3, y: 0.14 }, { x: 0.35, y: 0.21 }, { x: 0.4, y: 0.33 },
+      { x: 0.45, y: 0.5 }, { x: 0.5, y: 0.72 },
+      { x: 0.58, y: 0.6 }, { x: 0.68, y: 0.66 }, { x: 0.78, y: 0.62 }, { x: 1, y: 0.96 },
     ],
     description: 'A rounded "U" shaped base (the cup) followed by a small downward-drifting consolidation near the prior high (the handle) before a breakout to new highs.',
     keyTells: [
@@ -298,8 +298,10 @@ export const CHART_PATTERNS: PatternDef[] = [
     bias: 'bullish',
     kind: 'reversal',
     points: [
-      { x: 0, y: 0.75 }, { x: 0.25, y: 0.3 }, { x: 0.5, y: 0.16 },
-      { x: 0.75, y: 0.32 }, { x: 1, y: 0.78 },
+      { x: 0, y: 0.75 }, { x: 0.1, y: 0.55 }, { x: 0.2, y: 0.38 },
+      { x: 0.3, y: 0.25 }, { x: 0.4, y: 0.18 }, { x: 0.5, y: 0.15 },
+      { x: 0.6, y: 0.18 }, { x: 0.7, y: 0.25 }, { x: 0.8, y: 0.38 },
+      { x: 0.9, y: 0.55 }, { x: 1, y: 0.75 },
     ],
     description: 'A slow, gradual "U" shaped reversal with no handle, reflecting a long, quiet transition from distribution/selling to accumulation/buying. Often seen on longer timeframes (weekly/monthly).',
     keyTells: [

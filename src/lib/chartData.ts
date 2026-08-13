@@ -6,11 +6,10 @@ export interface ControlPoint {
   y: number; // fraction of amplitude, 0..1 (0 = low of range, 1 = high of range)
 }
 
-function smoothstep(t: number): number {
-  return t * t * (3 - 2 * t);
-}
-
 function interpolatePath(points: ControlPoint[], totalBars: number): number[] {
+  // Straight-line segments between control points, the way trendlines are actually
+  // drawn on real chart patterns (triangles, wedges, flags, necklines). A smoothed
+  // curve here would round off exactly the pivots that make a pattern recognizable.
   const idxPoints = points
     .map((p) => ({ i: Math.round(p.x * (totalBars - 1)), y: p.y }))
     .sort((a, b) => a.i - b.i);
@@ -20,7 +19,7 @@ function interpolatePath(points: ControlPoint[], totalBars: number): number[] {
     const b = idxPoints[seg + 1];
     const span = Math.max(1, b.i - a.i);
     for (let i = a.i; i <= b.i; i++) {
-      const t = smoothstep((i - a.i) / span);
+      const t = (i - a.i) / span;
       path[i] = a.y + (b.y - a.y) * t;
     }
   }
@@ -45,8 +44,8 @@ export function synthesizeBars(points: ControlPoint[], opts: SynthOptions): Bar[
     totalBars = 90,
     basePrice = 100,
     amplitude = 20,
-    noise = 0.55,
-    driftNoise = 0.35,
+    noise = 0.18,
+    driftNoise = 0.1,
     startTime = Math.floor(Date.now() / 1000) - 90 * 86400,
     intervalSec = 86400,
     volumeBase = 1_000_000,
@@ -106,7 +105,14 @@ export function appendRelativeCandles(context: Bar[], relCandles: RelCandle[], i
   const recent = context.slice(-10);
   const avgRange = recent.reduce((sum, b) => sum + (b.high - b.low), 0) / recent.length;
   const lastClose = context[context.length - 1].close;
-  const localRange = Math.max(avgRange * 1.8, lastClose * 0.01);
+  // The candle(s) being appended illustrate a specific signal (a hammer's long wick, an
+  // engulfing body, etc.) and need to read as visually dramatic against the recent bars —
+  // scaling off the *chart's overall visible range* keeps that legible regardless of how
+  // quiet the immediate lead-in happened to be, unlike scaling off recent bar-to-bar noise.
+  const visibleHigh = Math.max(...context.map((b) => b.high));
+  const visibleLow = Math.min(...context.map((b) => b.low));
+  const chartRange = visibleHigh - visibleLow;
+  const localRange = Math.max(avgRange * 2.2, chartRange * 0.16, lastClose * 0.02);
   const lo = lastClose - localRange;
   const hi = lastClose + localRange;
   const toPrice = (rel: number) => lo + rel * (hi - lo);
@@ -133,7 +139,7 @@ export function trendContextBars(seed: string, trend: 'uptrend' | 'downtrend', t
     trend === 'uptrend'
       ? [{ x: 0, y: 0.15 }, { x: 0.4, y: 0.35 }, { x: 0.7, y: 0.55 }, { x: 1, y: 0.78 }]
       : [{ x: 0, y: 0.85 }, { x: 0.4, y: 0.65 }, { x: 0.7, y: 0.45 }, { x: 1, y: 0.22 }];
-  return synthesizeBars(points, { seed, totalBars, noise: 0.35, driftNoise: 0.2, ...opts });
+  return synthesizeBars(points, { seed, totalBars, noise: 0.22, driftNoise: 0.12, ...opts });
 }
 
 export function randomWalkBars(seed: string, totalBars = 90, opts: Partial<SynthOptions> = {}): Bar[] {
@@ -144,5 +150,5 @@ export function randomWalkBars(seed: string, totalBars = 90, opts: Partial<Synth
     last = Math.min(0.95, Math.max(0.05, last + (rand() - 0.5) * 0.6));
     points.push({ x: i / 6, y: last });
   }
-  return synthesizeBars(points, { seed, totalBars, ...opts });
+  return synthesizeBars(points, { seed, totalBars, noise: 0.5, driftNoise: 0.3, ...opts });
 }

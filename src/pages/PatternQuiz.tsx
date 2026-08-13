@@ -82,9 +82,9 @@ export default function PatternQuiz() {
         </div>
       </div>
       {mode === 'chart' ? (
-        <ChartQuestion key={`chart-${seedTick}`} selected={selected} setSelected={setSelected} onNext={() => setSeedTick((t) => t + 1)} />
+        <ChartQuestion key={`chart-${seedTick}`} selected={selected} setSelected={setSelected} onNext={() => { setSelected(null); setSeedTick((t) => t + 1); }} />
       ) : (
-        <CandleQuestion key={`candle-${seedTick}`} selected={selected} setSelected={setSelected} onNext={() => setSeedTick((t) => t + 1)} />
+        <CandleQuestion key={`candle-${seedTick}`} selected={selected} setSelected={setSelected} onNext={() => { setSelected(null); setSeedTick((t) => t + 1); }} />
       )}
     </div>
   );
